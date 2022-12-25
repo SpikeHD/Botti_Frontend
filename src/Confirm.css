@@ -1,0 +1,13 @@
+.confirm_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.confirm_header {
+  padding: 20px;
+  font-size: 24px;
+}
