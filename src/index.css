@@ -33,16 +33,29 @@ body {
 }
 
 .menu_item {
-  padding: 14px;
+  padding: 10px;
+  margin: 4px;
+
+  border-radius: 8px;
+
+  border: 1px solid transparent;
 }
 
-.menu_list .selected {
-  font-weight: bold;
+.menu_item.selected {
+  /* font-weight: bold; */
+
+  background: #45433e;
+  border-color: #615e58;
+}
+
+.menu_list a {
+  text-decoration: none;
+  color: #fff;
 }
 
 #left {
   width: 20%;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 0 0;
 
   border-right: 2px solid #45433e;
 }

@@ -1,7 +1,12 @@
+import { Router } from 'preact-router'
+import { Link } from 'preact-router/match'
 import { ProfileIcon } from "./components/ProfileIcon";
 import { MainFeed } from "./MainFeed";
+import { Trending } from './Trending';
 
 export function App() {
+  if (window.location.href === '/') window.location.href = '/main'
+
   return (
     <div id="main">
       <div id="left">
@@ -10,13 +15,20 @@ export function App() {
         </div>
 
         <div class="menu_list">
-          <div class="menu_item">Home</div>
-          <div class="menu_item">Trending</div>
+            <Link href="/home" className="menu_item" activeClassName="selected">
+              Home
+            </Link>
+            <Link href="/trending" className="menu_item" activeClassName="selected">
+              Trending
+            </Link>
         </div>
       </div>
-      
+
       <div id="right">
-        <MainFeed />
+        <Router>
+          <MainFeed path="home" />
+          <Trending path="trending" />
+        </Router>
       </div>
     </div>
   )

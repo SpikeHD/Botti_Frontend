@@ -4,7 +4,19 @@
 }
 
 .profile_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   padding: 14px;
 
   height: 50px;
+
+  border-bottom: 1px solid #45433e;
+}
+
+.profile_image a {
+  text-decoration: none;
+  color: #fff;
 }
