@@ -6,10 +6,15 @@ interface Props {
 }
 
 export function ProfileIcon(props: Props) {
+  const logout = () => {
+    window.localStorage.setItem('auth_key', '')
+    window.location.href = '/login'
+  }
+
   return (
     <div class="circle_image profile_image">
       <img src={props.image || DefaultProfile}></img>
-      <a href="logout">Log Out</a>
+      <a href="logout" onClick={logout}>Log Out</a>
     </div>
   )
 }
