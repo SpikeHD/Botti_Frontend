@@ -1,7 +1,11 @@
 import { useState } from 'preact/hooks'
 import './Confirm.css'
 
-export function Confirm() {
+interface Props {
+  path: string
+}
+
+export function Confirm(props: Props) {
   const [confirmed, setConfirmed] = useState(false)
   const params = new URLSearchParams(window.location.search)
   let err = false

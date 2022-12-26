@@ -4,7 +4,11 @@ import { Error } from '../components/Error'
 // Use the same login.css
 import './Login.css'
 
-export function Register() {
+interface Props {
+  path: string
+}
+
+export function Register(props: Props) {
   const [emailed, setEmailed] = useState(false)
   const [err, showErr] = useState(false)
   const [errMsg, setErrMsg] = useState('An unknown error has occurred')
