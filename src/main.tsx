@@ -3,6 +3,7 @@ import { App } from './app'
 import { Login } from './Login'
 import './index.css'
 import { Confirm } from './Confirm'
+import { Register } from './Register'
 
 // TODO change
 process.env.API_URL = 'http://localhost:4000'
@@ -12,6 +13,13 @@ process.env.API_URL = 'http://localhost:4000'
   if (window.location.pathname === '/confirm') {
     // @ts-expect-error shut up
     render(<Confirm />, document.getElementById('app'))
+    return
+  }
+
+  // Registration, special case
+  if (window.location.pathname === '/register') {
+    // @ts-expect-error shut up
+    render(<Register />, document.getElementById('app'))
     return
   }
 

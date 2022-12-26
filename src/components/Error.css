@@ -1,0 +1,20 @@
+.error {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+
+  width: 80%;
+  top: -100px;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  background: #910000;
+
+  transition: all 0.2s ease-out;
+}
+
+.error.show {
+  top: 20px;
+}
