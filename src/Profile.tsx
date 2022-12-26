@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks"
+import { useState, useEffect } from "preact/hooks"
 import { getProfile } from "./util/apiRequest"
 
 interface Props {
@@ -10,12 +10,10 @@ export function Profile(props: Props) {
   const uid = Number(window.location.pathname.split("/")[2])
 
   useEffect(() => {
-    console.log('effect')
     ;(async () => {
-      const profileData = await getProfile(uid)
-      console.log(profileData)
+      setUserState(await getProfile(uid))
     })()
-  })
+  }, [])
 
   return (
     <div id="profile">This is a profile page for {uid}</div>
