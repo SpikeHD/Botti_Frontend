@@ -27,9 +27,16 @@ export function Login(props: Props) {
     }
   }
 
+  document.addEventListener('keydown', (e) => {
+    console.log(e)
+    if (e.key === 'Enter') {
+      login()
+    }
+  })
+
   return (
     <div id="login">
-      <div class="box_title">Welcome to Botti!</div>
+      <div class="box_title">Welcome to Botti!<br/><br/>Login</div>
       <div id="login_box">
         <div class="login_section">
           <div class="login_header">Email</div>

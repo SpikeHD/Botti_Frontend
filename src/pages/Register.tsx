@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks'
-import { Error } from './components/Error'
+import { Error } from '../components/Error'
 
 // Use the same login.css
 import './Login.css'
@@ -7,9 +7,9 @@ import './Login.css'
 export function Register() {
   const [emailed, setEmailed] = useState(false)
   const [err, showErr] = useState(false)
-  const [errMsg, setErrMsg] = useState('')
+  const [errMsg, setErrMsg] = useState('An unknown error has occurred')
 
-  const register = async () => {
+  const registerAccount = async () => {
     const email = document.querySelector('#login_email') as HTMLInputElement
     const username = document.querySelector('#login_username') as HTMLInputElement
     const password = document.querySelector('#login_password') as HTMLInputElement
@@ -40,7 +40,7 @@ export function Register() {
   return (
     <div id="login">
       <Error show={err} message={errMsg} />
-      <div class="box_title">Welcome to Botti!</div>
+      <div class="box_title">Welcome to Botti!<br /><br/>Register</div>
       {
         emailed ? (
           <>
@@ -62,7 +62,7 @@ export function Register() {
               <input id="login_password" type='password' placeholder='Password'/>
             </div>
             <div class="login_section bottom">
-              <div class="fake_ass_button" onClick={register}>Register</div>
+              <div class="fake_ass_button" onClick={registerAccount}>Register</div>
               <div class="or">- or -</div>
               <a href="/login">Login</a>
             </div>

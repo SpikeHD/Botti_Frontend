@@ -1,9 +1,10 @@
 import { render } from 'preact'
 import { App } from './app'
-import { Login } from './Login'
+import { Login } from './pages/Login'
+import { Confirm } from './pages/Confirm'
+import { Register } from './pages/Register'
+
 import './index.css'
-import { Confirm } from './Confirm'
-import { Register } from './Register'
 
 // TODO change
 process.env.API_URL = 'http://localhost:4000'

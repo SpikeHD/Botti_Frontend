@@ -1,8 +1,8 @@
 import { Router } from 'preact-router'
 import { Link } from 'preact-router/match'
 import { ProfileIcon } from "./components/ProfileIcon";
-import { Login } from './Login';
 import { MainFeed } from "./MainFeed";
+import { Profile } from './Profile';
 import { Trending } from './Trending';
 
 export function App() {
@@ -29,6 +29,7 @@ export function App() {
         <Router>
           <MainFeed path="home" />
           <Trending path="trending" />
+          <Profile path="profile/:profileId" />
         </Router>
       </div>
     </div>
