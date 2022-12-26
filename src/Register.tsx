@@ -25,8 +25,6 @@ export function Register() {
 
     const resp = await maybeEmailed.json()
 
-    console.log(maybeEmailed)
-
     if (!resp.success) {
       setErrMsg(resp.message)
       showErr(true)
